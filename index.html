@@ -7,7 +7,7 @@
 </head>
 <div>
 
-    <input type="number" id="arabicNumber">
+    <input type="number" id="numberToConvert">
     <button type="button" value="Valider" onclick="submitForm()">Valider</button>
     <label id="numberConverted"></label>
 
@@ -18,13 +18,13 @@
 <script type="text/javascript">
 
     function submitForm() {
-        var arabicNumber = $("#arabicNumber").val();
+        var numberToConvert = $("#numberToConvert").val();
         var  numberConverted = $("#numberConverted");
         $.ajax({
             url: "http://localhost:8080/convertNumber",
             type: "get",
             data: {
-                arabicNumber: arabicNumber,
+                arabicNumber: numberToConvert,
             },
             success: function(response) {
                 numberConverted.html(response[0]["numberConverted"]);
