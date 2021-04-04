@@ -1,30 +1,47 @@
 <html lang="fr" >
-<body>
 <head>
     <meta charset="UTF-8">
     <title>Formulaire</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 </head>
-<div>
+<body style="background-color: #e5e5e5;">
 
-    <input type="number" id="numberToConvert">
-    <button type="button" value="Valider" onclick="submitForm()">Valider</button>
-    <label id="numberConverted"></label>
+<div class="container-fluid">
+    <header class="bg-secondary text-center text-white text-lg-start fixed-top mb-5">
+        <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            Exercice réalisé par / Exercise made by <a class="text-white fw-bold" href="https://www.linkedin.com/in/julien-marfella/" target="_blank">MARFELLA Julien</a>
+        </div>
+    </header>
+
+    <div class="row justify-content-center mt-5">
+        <h3 class="text-center mt-5">Convertisseur de nombres arabes en nombres romains / Converter of Arabic numbers to Roman numbers </h3>
+        <div class="col-lg-10 text-center rounded shadow bg-light mt-5 h-100">
+            <label for="numberToConvert" class="form-label mt-5 fs-4">Nombre arabe à convertir / Arabic number to convert :</label>
+            <div class="d-flex justify-content-center">
+                <input id="numberToConvert" class="form-control w-75" type="number" min="0" max="100" name="numberToConvert" placeholder="Saisissez  un nombre compris entre 0 et 100 / Choose a number between 0 and 100">
+            </div>
+            <label for="numberConverted" class="form-label mt-3 fs-4">Nombre romain équivalent : / Roman number equivalent :</label><br>
+            <span id="numberConverted" class="fw-bold fs-3">En attente... / Waiting...</span><br>
+            <div class="d-flex justify-content-center">
+                <input type="button" class="btn btn-primary w-75 mt-3 mb-5" value="Valider / Submit" onclick="submitForm()">
+            </div>
+        </div>
+
+    </div>
 
 </div>
-
-</body>
 
 <script type="text/javascript">
 
     function submitForm() {
         var numberToConvert = $("#numberToConvert").val();
-        var  numberConverted = $("#numberConverted");
+        var numberConverted = $("#numberConverted");
         $.ajax({
             url: "http://localhost:8080/convertNumber",
             type: "get",
             data: {
-                arabicNumber: numberToConvert,
+                numberToConvert: numberToConvert,
             },
             success: function(response) {
                 numberConverted.html(response[0]["numberConverted"]);
@@ -37,4 +54,5 @@
     }
 
 </script>
+</body>
 </html>

@@ -26,12 +26,12 @@ server.get('/convertNumber', function(request, response) {
     var resultJson = [];
     if(numberToConvert < 0 || numberToConvert > 100 || numberToConvert % 1 != 0)
     {
-        numberConverted = "Votre nombre doit être compris entre 0 et 100 et doit être un nombre entier (sans virgule)";
+        numberConverted = "Votre nombre doit être compris entre 0 et 100 et doit être un nombre entier <br> Your number must be between 0 and 100 and must be an integer";
     }
 
     else if (numberToConvert == 0)
     {
-        numberConverted = "Les Romains n'ont pas de 0."
+        numberConverted = "Les Romains n'ont pas de 0 / The Romans don't have 0"
     }
 
     else
