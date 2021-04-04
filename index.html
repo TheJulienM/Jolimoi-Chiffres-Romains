@@ -1,12 +1,38 @@
 <html lang="fr" >
 <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<div>
 
-<form method="get" action="/convertNumber">
+    <input type="number" id="arabicNumber">
+    <button type="button" value="Valider" onclick="submitForm()">Valider</button>
 
-    <input type="number" name="arabicNumber">
-    <button type="submit" value="Valider">Valider</button>
-
-</form>
+</div>
 
 </body>
+
+<script type="text/javascript">
+
+    function submitForm() {
+        var arabicNumber = $("#arabicNumber").val();
+        $.ajax({
+            url: "http://localhost:8080/convertNumber",
+            type: "get",
+            data: {
+                arabicNumber: arabicNumber,
+            },
+            success: function(response) {
+                console.log(response)
+
+            },
+            error: function(xhr) {
+                console.log("error");
+            }
+        });
+    }
+
+</script>
 </html>

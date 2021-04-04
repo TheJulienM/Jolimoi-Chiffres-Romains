@@ -9,7 +9,7 @@ server.get('/', function(request, response) {
 });
 
 server.get('/convertNumber', function(request, response) {
-    response.write("Test route");
-    response.end()
+    var numberToConvert = request.query.arabicNumber;
+    console.log("numberToConvert " + numberToConvert)
 });
 
