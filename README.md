@@ -12,7 +12,7 @@ La requête sera envoyé en AJAX.
 
 - Clonez le repository : git clone https://github.com/TheJulienM/Jolimoi-Chiffres-Romains.git
 - Placez-vous dans le répertoire cloné avec un cmd et exécuter la commande ```node index.js```
-- Rendez-vous dans votre navigateur favori à l'adresse : http://loalhost:8080 (Changer le port en fonction de votre configuration si nécessaire) 
+- Rendez-vous dans votre navigateur favori à l'adresse : http://localhost:8080 (Changer le port en fonction de votre configuration si nécessaire) 
 
 **Vous pouvez à présent utiliser l'application !**
 
@@ -30,7 +30,7 @@ The request will be sent in AJAX.
 
 - Clone the repository with a cmd: git clone https://github.com/TheJulienM/Jolimoi-Chiffres-Romains.git
 - Go to the cloned directory with a cmd and run the command ```node index.js```
-- Go to your favorite browser at the address: http: // loalhost: 8080 (Change the port according to your configuration if necessary)
+- Go to your favorite browser at the address: http://localhost:8080 (Change the port according to your configuration if necessary)
 
 ** You can now use the app! **
 
