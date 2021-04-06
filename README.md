@@ -18,7 +18,7 @@ La requête sera envoyé en AJAX.
 
 *Anglais*
 
-** Goal of the exercise: Converting Arabic numbers to Roman numbers. **
+**Goal of the exercise: Converting Arabic numbers to Roman numbers.**
 
 A form allows you to enter a decimal number between 0 and 100. The validation of this
 form displays to the user the conversion of the decimal number into a digit
@@ -26,12 +26,12 @@ Roman. The conversion rules are given in the appendix.
 For example, if the user enters 9 and validates the form, the page should display "IX".
 The request will be sent in AJAX.
 
-** How to start the project? **
+**How to start the project?**
 
 - Clone the repository with a cmd: git clone https://github.com/TheJulienM/Jolimoi-Chiffres-Romains.git
 - Go to the cloned directory with a cmd and run the command ```node index.js```
 - Go to your favorite browser at the address: http://localhost:8080 (Change the port according to your configuration if necessary)
 
-** You can now use the app! **
+**You can now use the app!**
 
 
