@@ -21,7 +21,7 @@ server.get('/', function(request, response) {
 });
 
 server.get('/convertNumber', function(request, response) {
-    var numberToConvert = request.query.arabicNumber;
+    var numberToConvert = request.query.numberToConvert;
     var numberConverted;
     var resultJson = [];
     if(numberToConvert < 0 || numberToConvert > 100 || numberToConvert % 1 != 0)
